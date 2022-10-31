@@ -1,0 +1,88 @@
+.jobs-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .job-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .job-company {
+    padding: 0.3rem 0.7rem;
+    background: var(--primary-color-4);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    display: inline-block;
+    font-weight: bold;
+    color: #777;
+    letter-spacing: 0.1rem;
+  }
+
+  // JOB BUTTONS
+  .job-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    .job-btn {
+      border: none;
+      display: block;
+      background: transparent;
+      padding: 0.4rem 1rem;
+      position: relative;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      transition: all 0.3s;
+      &:hover {
+        color: var(--primary-color-1);
+      }
+
+      //   ACTIVE BUTTON STYLES
+      &.active {
+        color: var(--primary-color-1);
+      }
+      &.active::after {
+        content: "";
+        position: absolute;
+        transition: all 0.3s;
+        width: 2px;
+        height: 100%;
+        border-radius: 20px;
+        background: var(--primary-color-1);
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  // JOB INFO
+  .job-info-wrapper {
+    .job-date {
+      margin-bottom: 2rem;
+      color: #777;
+    }
+
+    .job-description-item {
+      display: grid;
+      grid-template-columns: 35px 1fr;
+      margin-bottom: 1rem;
+      align-items: center;
+    }
+
+    .job-icon {
+      margin-right: 1rem;
+      color: var(--primary-color-1);
+      font-size: 1.3rem;
+    }
+
+    .description-text {
+      color: #555;
+    }
+  }
+}
